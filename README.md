@@ -1,19 +1,19 @@
 # UTN programacion 1
 
----
-
 ### Tecnicatura Universitaria en Programación
 
 📍 Universidad Tecnológica Nacional
 
 ## ✨ Estudiante
 
-Nombre: Saulo Garcia
-Comisión: M2025-5
+Nombre: Saulo Garcia  
+Comisión: AGO2025-5  
+
 ## 📂 Descripción del Repositorio
+
 Este repositorio almacena todas los trabajos prácticos realizados durante la cursada de Programación 1.
 
-## 📌 Estructura del repositorio:
+## 📌 Estructura del repositorio
 
 Cada trabajo está organizado en carpetas individuales.  
 Los archivos de código fuente (.py) incluyen comentarios y estructura adecuada.  
