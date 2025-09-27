@@ -189,6 +189,7 @@ for fila in range(3):
     print()
 
 jugador = 1
+# observarcion utilizo while true para hacer uso de la sentencia break en lugar de una bandera
 while True:
     print("--------------------------------")
     print(f"Jugador {jugador}")
@@ -211,4 +212,60 @@ while True:
 
     salir = input("¿Desea salir? (s/n): ")
     if salir == "s":
-        break
+        break # salir del bucle while
+
+
+# 10) Una tienda registra las ventas de 4 productos durante 7 días, en una matriz de 4x7.
+# • Mostrar el total vendido por cada producto.
+# • Mostrar el día con mayores ventas totales.
+# • Indicar cuál fue el producto más vendido en la semana
+
+print("--------------------------------")
+print("Ejercicio 10 ")
+print("--------------------------------")
+
+matriz = [
+    [1,2,3,8,5,6,7],
+    [8,9,20,9,1,3,4],
+    [5,6,80,1,9,2,3],
+    [2,3,400,5,6,3,8]
+]
+
+# total vendido por cada producto
+for producto in range(len(matriz)):
+    suma = 0
+    for dia in range(len(matriz[0])):
+        suma += matriz[producto][dia]
+    print(f"El total vendido por el producto {producto + 1} es {suma}")
+
+
+print()
+# dia con mayores ventas totales
+venta_max_dia = 0
+dia_max_venta = 0
+
+for dia in range(len(matriz[0])):
+    suma = 0
+    for producto in range(len(matriz)):
+        suma += matriz[producto][dia]
+    if suma > venta_max_dia:
+        venta_max_dia = suma
+        dia_max_venta = dia
+
+# se suma 1 porque el rango de los dias es de 0 a 6
+print(f"El dia con mayores ventas totales es {dia_max_venta+1} se vendieron {venta_max_dia} unidades de productos")
+
+print()
+# producto mas vendido en la semana
+venta_max_producto = 0
+producto_max_venta = 0
+for producto in range(len(matriz)):
+    suma = 0
+    for dia in range(len(matriz[0])):
+        suma += matriz[producto][dia]
+    if suma > venta_max_producto:
+        venta_max_producto = suma
+        producto_max_venta = producto
+
+# se suma 1 porque el rango de los productos es de 0 a 3
+print(f"El producto mas vendido en la semana es el {producto_max_venta+1} se vendieron {venta_max_producto} unidades de productos")
